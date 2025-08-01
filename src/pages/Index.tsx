@@ -127,7 +127,7 @@ const Index = () => {
       <header className="relative z-10 text-center py-8 px-4">
         <div className="animate-fade-in-up">
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-warm bg-clip-text text-transparent mb-3">
-            Mi Chat Amigo
+            Rockie
           </h1>
           <p className="text-lg text-muted-foreground max-w-md mx-auto leading-relaxed">
             Conversa conmigo usando texto o voz. ¡Estoy aquí para escucharte!
