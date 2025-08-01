@@ -23,7 +23,7 @@ export const FloatingButtons = ({
   return (
     <div
       className={cn(
-        "fixed bottom-6 right-6 flex flex-col gap-3 z-40",
+        "fixed bottom-6 left-1/2 transform -translate-x-1/2 flex gap-4 z-40",
         className
       )}
       onMouseEnter={() => setIsHovered(true)}
@@ -77,7 +77,7 @@ export const FloatingButtons = ({
 
       {/* Indicador de modo activo */}
       {currentMode === "voice" && (
-        <div className="absolute -left-16 top-1/2 -translate-y-1/2">
+        <div className="absolute -top-12 left-0">
           <div className="bg-black/80 text-white text-xs px-2 py-1 rounded-lg whitespace-nowrap animate-fade-in-up">
             {isRecording ? "Grabando..." : "Modo voz"}
           </div>
@@ -85,7 +85,7 @@ export const FloatingButtons = ({
       )}
       
       {currentMode === "text" && (
-        <div className="absolute -left-16 top-1/2 -translate-y-1/2">
+        <div className="absolute -top-12 right-0">
           <div className="bg-black/80 text-white text-xs px-2 py-1 rounded-lg whitespace-nowrap animate-fade-in-up">
             Modo texto
           </div>
