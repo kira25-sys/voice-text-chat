@@ -61,7 +61,22 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				'chat-bg': 'hsl(var(--chat-bg))',
+				'user-bubble': 'hsl(var(--user-bubble))',
+				'ai-bubble': 'hsl(var(--ai-bubble))',
+				'mic-button': 'hsl(var(--mic-button))',
+				'keyboard-button': 'hsl(var(--keyboard-button))'
+			},
+			backgroundImage: {
+				'gradient-warm': 'var(--gradient-warm)',
+				'gradient-bg': 'var(--gradient-bg)',
+				'gradient-subtle': 'var(--gradient-subtle)'
+			},
+			boxShadow: {
+				'warm': 'var(--shadow-warm)',
+				'float': 'var(--shadow-float)',
+				'glow': 'var(--shadow-glow)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +99,47 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-glow': {
+					'0%, 100%': {
+						transform: 'scale(1)',
+						boxShadow: '0 0 20px hsl(var(--mic-button) / 0.3)'
+					},
+					'50%': {
+						transform: 'scale(1.05)',
+						boxShadow: '0 0 30px hsl(var(--mic-button) / 0.6)'
+					}
+				},
+				'fade-in-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'bounce-in': {
+					'0%': {
+						transform: 'scale(0.95)',
+						opacity: '0'
+					},
+					'50%': {
+						transform: 'scale(1.02)'
+					},
+					'100%': {
+						transform: 'scale(1)',
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-glow': 'pulse-glow 1.5s ease-in-out infinite',
+				'fade-in-up': 'fade-in-up 0.3s ease-out',
+				'bounce-in': 'bounce-in 0.4s ease-out'
 			}
 		}
 	},
